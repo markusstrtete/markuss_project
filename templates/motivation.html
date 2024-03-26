@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="motivation-container" id="motivation-container">
+        <h2>Nejauša motivācija</h2>
+        <p>{{ random_motivation }}</p>
+        <form method="POST" action="/motivation" id="motivation-form">
+            <input type="submit" value="Iegūt Nejaušu Motivāciju" id="get-motivation-button">
+        </form>
+    </div>
+    <button onclick="window.location.href='/dashboard'" id="go-back-button">Atpakaļ</button>
+</body>
+</html>

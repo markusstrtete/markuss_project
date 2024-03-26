@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nedēļas Plāni</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="plans-container" id="plans-container">
+        <h2 id="week-heading">11. nedēļa</h2>
+        <div id="calendar">
+
+        </div>
+        <button id="previousWeekButton">Iepriekšējā nedēļa</button>
+        <button id="nextWeekButton">Nākamā nedēļa</button>
+    </div>
+    <button onclick="window.location.href='/dashboard'" id="go-back-button">Atpakaļ</button>
+
+    <script>
+        let startDate = new Date('2024-03-11');
+        let endDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
+        let userId = '{{ user.id }}';
+
+        function getNextWeek() {
+            window.location.href = "/week_twelve";
+        }
+
+        function getPreviousWeek() {
+            window.location.href = "/week_ten";
+        }
+
+        function saveContent() {
+            const inputFields = document.querySelectorAll('#calendar input');
+            inputFields.forEach(input => {
+                localStorage.setItem(userId + '_' + input.id, input.value);
+            });
+        }
+
+        function loadContent() {
+            const inputFields = document.querySelectorAll('#calendar input');
+            inputFields.forEach(input => {
+                const savedContent = localStorage.getItem(userId + '_' + input.id);
+                if (savedContent) {
+                    input.value = savedContent;
+                }
+            });
+        }
+    
+        function generateCalendar(startDate, endDate) {
+            let calendarDiv = document.getElementById('calendar');
+            calendarDiv.innerHTML = '';
+    
+            let currentDate = new Date(startDate);
+            let dayNames = ['Svētdiena', 'Pirmdiena', 'Otrdiena', 'Trešdiena', 'Ceturtdiena', 'Piektdiena', 'Sestdiena', 'Svētdiena'];
+    
+            while (currentDate <= endDate) {
+                let dayDiv = document.createElement('div');
+                dayDiv.innerHTML = `<h3>${dayNames[currentDate.getDay()]}</h3><p>${currentDate.toLocaleDateString('lv', { month: 'long', day: 'numeric' })}</p>`;
+    
+                for (let hour = 7; hour <= 23; hour++) {
+                    let inputField = document.createElement('input');
+                    inputField.type = 'text';
+                    inputField.id = `${currentDate.getMonth() + 1}-${currentDate.getDate()}_${hour.toString().padStart(2, '0')}`;
+                    inputField.placeholder = `${hour.toString().padStart(2, '0')}:00 - ${(hour + 1).toString().padStart(2, '0')}:00`;
+
+                    const savedContent = localStorage.getItem(userId + '_' + inputField.id);
+                    if (savedContent) {
+                        inputField.value = savedContent;
+                    }
+
+                    inputField.addEventListener('input', function() {
+                        localStorage.setItem(userId + '_' + inputField.id, inputField.value);
+                    });
+
+                    dayDiv.appendChild(inputField);
+                }
+    
+                calendarDiv.appendChild(dayDiv);
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            loadContent();
+        }
+    
+        generateCalendar(startDate, endDate);
+
+        document.getElementById('previousWeekButton').addEventListener('click', function() {
+            saveContent();
+            getPreviousWeek();
+        });
+
+        document.getElementById('nextWeekButton').addEventListener('click', function() {
+            saveContent();
+            getNextWeek();
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mācību Platfromas</h1>
+    <h2 class="platform-h2">Izvēlies piemērotāko sev!</h2>
+    <div class="platform-container">
+        <div class="platform">
+            <a href="https://www.uzdevumi.lv/p" target="_blank">
+                <img src="https://i.ibb.co/2cc6B49/uzdevumi.jpg" alt="uzdevumi">
+            </a>
+        </div>
+        <div class="platform">
+            <a href="https://memby.lv/" target="_blank">
+                <img src="https://i.ibb.co/MnLs1DM/memby.jpg" alt="memby">
+            </a>
+        </div>
+        <div class="platform">
+            <a href="https://skolo.lv/" target="_blank">
+                <img src="https://i.ibb.co/xsqQqYs/skolo.jpg" alt="skolo">
+            </a>
+        </div>
+    </div>
+    <button id="goBackButton" onclick="window.location.href='/learning'">Atpakaļ</button>
+</body>
+</html>

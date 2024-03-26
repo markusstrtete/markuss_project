@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 id="taskTitle">Matemātika I - 10. Ieskaite</h1>
+        
+        <div class="task-section">
+            <h2 id="taskDescription">Matemātika I</h2>
+            <p>Šajā ieskaitē jāiesniedz publiskā GitHub repozitorija adrese, kurā publicēts izstrādātais programmatūras projekts un tā dokumentācija.</p>
+            <p>Ņem vērā: ieskaites darbs netiks vērtēts līdz brīdim, kamēr tas nav ticis prezentēts.</p>
+        </div>
+        
+        <div class="task-section">
+            <h2 id="taskListTitle">Uzdevumi</h2>
+            <ol>
+                <li>
+                    <strong>1. uzdevums</strong><br>
+                    <span id="task1Description">Faila augšupielāde</span><br>
+                    <em>6 punkti</em>
+                </li>
+                <li>
+                    <strong>2. uzdevums</strong><br>
+                    <span id="task2Description">Tests</span><br>
+                    <em>6 punkti</em>
+                </li>
+                <li>
+                    <strong>3. uzdevums</strong><br>
+                    <span id="task3Description">Vārdu ievietošana</span><br>
+                    <em>4 punkti</em>
+                </li>
+                <li>
+                    <strong>4. uzdevums</strong><br>
+                    <span id="task4Description">Vairākas izvēles</span><br>
+                    <em>8 punkti</em>
+                </li>
+                <li>
+                    <strong>5. uzdevums</strong><br>
+                    <span id="task5Description">Faila augšupielāde</span><br>
+                    <em>4 punkti</em>
+                </li>
+                <li>
+                    <strong>6. uzdevums</strong><br>
+                    <span id="task6Description">Faila augšupielāde</span><br>
+                    <em>4 punkti</em>
+                </li>
+                <li>
+                    <strong>7. uzdevums</strong><br>
+                    <span id="task7Description">Faila augšupielāde</span><br>
+                    <em>5 punkti</em>
+                </li>
+            </ol>
+        </div>
+
+        <div class="task-section">
+            <h2 id="fileUploadTitle">Iesniegt</h2>
+            <form action="/submitted3" method="post" enctype="multipart/form-data">
+                <label for="file" class="custom-file-upload">Izvēlieties failu</label>
+                <input type="file" name="file" id="file" required>
+                <br>
+                <input type="submit" value="Iesniegt">
+            </form>
+        </div>
+        <button id="BackButton" onclick="window.location.href='/exams'">Atpakaļ</button>
+    </div>
+</body>
+</html>

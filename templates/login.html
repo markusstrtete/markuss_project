@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-form" id="login-form">
+        <h2>Pieslēgties</h2>
+        <form method="POST" action="/login">
+            <label for="username">Lietotājvārds:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Parole:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Pieslēgties">
+        </form>
+        {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+        {% endif %}
+    </div>
+    <div class="centered-button">
+        <button onclick="window.location.href='/'">Atpakaļ</button>
+    </div>
+</body>
+</html>

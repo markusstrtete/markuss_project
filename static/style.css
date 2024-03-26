@@ -1,0 +1,620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+}
+
+#home-heading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#home-heading p {
+    font-size: 24px;
+    color: #333;
+}
+
+#home-buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#home-buttons a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#home-buttons button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#home-buttons button:hover {
+    background-color: #0056b3;
+}
+
+#registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#registration-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#registration-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registration-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.centered-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-button button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.centered-button button:hover {
+    background-color: #0056b3;
+}
+
+#login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#login-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#login-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#dashboard {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#dashboard h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#dashboard-buttons button {
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dashboard-buttons button:hover {
+    background-color: #0056b3;
+}
+
+#logout-button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logout-button:hover {
+    background-color: #c82333;
+}
+
+#motivation-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#motivation-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#motivation-container p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#motivation-form {
+    display: flex;
+    justify-content: center;
+}
+
+#motivation-form input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#motivation-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#go-back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#go-back-button:hover {
+    background-color: #0056b3;
+}
+
+#weekly-plans-heading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#weekly-plans-table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#weekly-plans-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+#weekly-plans-table a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#weekly-plans-table a:hover {
+    background-color: #0056b3;
+}
+
+#plans-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#week-heading {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#calendar {
+    margin-bottom: 20px;
+}
+
+#calendar div {
+    margin-bottom: 20px;
+}
+
+#calendar h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#calendar input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#previousWeekButton,
+#nextWeekButton {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#previousWeekButton:hover,
+#nextWeekButton:hover {
+    background-color: #0056b3;
+}
+
+#go-back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#go-back-button:hover {
+    background-color: #0056b3;
+}
+
+.learningdash {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.learningdash h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+#goBackButton {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#goBackButton:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.exam-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.exam-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.exam {
+    width: calc(33.33% - 30px);
+    margin: 0 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exam h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.exam p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.exam a,
+.task-link-button {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.exam a:hover {
+    text-decoration: underline;
+}
+
+#goBackButton {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#goBackButton:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskTitle {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.task-section {
+    margin-bottom: 30px;
+}
+
+#taskDescription {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#taskListTitle {
+    margin-bottom: 10px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+ol li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+li strong {
+    font-weight: bold;
+}
+
+li em {
+    font-style: italic;
+}
+
+#fileUploadTitle {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"],
+#BackButton {
+    flex-basis: 48%;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+#BackButton:hover {
+    background-color: #0056b3;
+}
+
+#fileUploadTitle {
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    background-color: #007bff;
+    margin-bottom: 30px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+.platform-h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+}
+
+.platform-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.platform {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.platform:hover img {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.platform img {
+    width: 300px;
+    height: 300px;
+    transition: filter 0.3s;
+}
+
+.submitted p {
+    text-align: center;
+}

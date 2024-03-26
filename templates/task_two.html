@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 id="taskTitle">Projekta darbs</h1>
+        
+        <div class="task-section">
+            <h2 id="taskDescription">Projekta darbs</h2>
+            <p>Šeit iesniedz publiskā GitHub repozitorija adresi, kurā publicēts izstrādātais programmatūras projekts un tā dokumentācija.</p>
+            <p>Ņem vērā: darbs netiek vērtēts līdz brīdim, kamēr tas nav ticis prezentēts.</p>
+        </div>
+        
+        <div class="task-section">
+            <h2 id="taskListTitle">Uzdevumi</h2>
+            <ol>
+                <li>
+                    <strong>1. uzdevums</strong><br>
+                    <span id="task1Description">Eseja</span><br>
+                    <em>130 punkti</em>
+                </li>
+            </ol>
+        </div>
+
+        <div class="task-section">
+            <h2 id="fileUploadTitle">Augšupielādēt failus</h2>
+            <form action="/submitted2" method="post" enctype="multipart/form-data">
+                <label for="file" class="custom-file-upload">Izvēlieties failu</label>
+                <input type="file" name="file" id="file">
+                <br>
+                <input type="submit" value="Iesniegt">
+            </form>
+        </div>
+        <button id="BackButton" onclick="window.location.href='/exams'">Atpakaļ</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Gaidāmie izmēģinājumi</h1>
+
+    <div class="exam-table">
+        <div class="exam-row">
+            <div class="exam">
+                <h2 id="exam1">1. Projekta darbs</h2>
+                <p>Ilgums: no 1. septembra 2023. līdz 31. martam 2024. gadā</p>
+                <a id="taskOneLink" href="/task_one">Uzdevuma detaļas</a>
+            </div>
+            <div class="exam">
+                <h2 id="exam2">2. Programmēšana II-3. ieskaite</h2>
+                <p>Ilgums: no 1. februāra 2024. līdz 31. martam 2024. gadā</p>
+                <a id="taskTwoLink" href="/task_two">Uzdevuma detaļas</a>
+            </div>
+            <div class="exam">
+                <h2 id="exam3">3. Matemātika I - 10. ieskaite</h2>
+                <p>Ilgums: no 1. marta 2024. līdz 31. martam 2024. gadā</p>
+                <a id="taskThreeLink" href="/task_three">Uzdevuma detaļas</a>
+            </div>
+        </div>
+    </div>
+
+    <button id="goBackButton" onclick="window.location.href='/learning'">Atpakaļ</button>
+</body>
+</html>

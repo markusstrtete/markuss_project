@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvijas Skolnieku Digitālā Mācību Platforma</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard" id="dashboard">
+        <h1>Laipni lūdzam uz Informācijas Paneli!</h1>
+        <div class="buttons" id="dashboard-buttons">
+            <button id="motivation-button" onclick="window.location.href='/motivation'">Iegūt Motivāciju</button>
+            <button id="plans-button" onclick="window.location.href='/plan'">Pārvaldīt Plānus</button>
+            <button id="learning-button" onclick="window.location.href='/learning'">Sekot līdzi Mācību Procesam</button>
+        </div>
+    </div>
+    <button id="logout-button" onclick="window.location.href='/logout'">Iziet</button>
+</body>
+</html>
